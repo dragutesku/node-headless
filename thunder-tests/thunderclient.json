@@ -1,0 +1,92 @@
+[
+  {
+    "_id": "f06fccbb-3085-4d28-9a08-a88d334bb5b5",
+    "colId": "2baedc6f-dbeb-484c-8d6e-49700e0dc877",
+    "containerId": "",
+    "name": "Register User",
+    "url": "http://localhost:4001/api/users/register",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-04-27T15:31:46.924Z",
+    "modified": "2022-04-29T15:40:01.869Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"alin.barbu@gmail.com\",\n  \"firstName\": \"Alexssandsruwu\",\n  \"lastName\": \"Dragutescu\",\n  \"password\": \"12345\",\n  \"isSuperUser\": true,\n  \"role\": \"eviloverlord\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "7b433b61-65f7-421f-b529-ff3d379c9338",
+    "colId": "2baedc6f-dbeb-484c-8d6e-49700e0dc877",
+    "containerId": "",
+    "name": "Get Users",
+    "url": "http://localhost:4001/api/users/",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-04-27T15:32:20.173Z",
+    "modified": "2022-04-27T19:12:53.575Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "c0c11478-b725-4f98-acec-ef6d1686f10f",
+    "colId": "2baedc6f-dbeb-484c-8d6e-49700e0dc877",
+    "containerId": "",
+    "name": "Login User",
+    "url": "http://localhost:4001/api/users/login",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-04-27T16:20:32.260Z",
+    "modified": "2022-05-04T11:30:47.448Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"email\": \"andrei.barbu@gmail.com\",\n    \"password\": \"12345\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "fa624c61-7d64-40a1-b4a9-7916830d7209",
+    "colId": "2baedc6f-dbeb-484c-8d6e-49700e0dc877",
+    "containerId": "",
+    "name": "Post ",
+    "url": "http://localhost:4001/api/posts/",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2022-04-27T19:13:48.554Z",
+    "modified": "2022-04-27T19:16:30.192Z",
+    "headers": [
+      {
+        "name": "x-access-token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuZHJlaS5iYXJidUBnbWFpbC5jb20iLCJpYXQiOjE2NTEwODY5MzAsImV4cCI6MTY1MTA5NDEzMH0.4niLhR0A7OOOyt37iji6IkP5A1u6PP-KYvyWk8DbSKc"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"title\": \"Some post\",\n    \"content\": \"This a post kadkajsdnjaskdlas\",\n    \"isPublished\": true\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "22974437-1577-4c13-bca4-865f9d78750c",
+    "colId": "2baedc6f-dbeb-484c-8d6e-49700e0dc877",
+    "containerId": "",
+    "name": "http://localhost:4001/api/users/logout",
+    "url": "http://localhost:4001/api/users/logout",
+    "method": "POST",
+    "sortNum": 50000,
+    "created": "2022-04-29T15:16:43.302Z",
+    "modified": "2022-04-29T15:16:43.302Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

@@ -1,0 +1,248 @@
+[
+  {
+    "_id": "5e515073-45af-40a4-9a97-b213161d1372",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/posts",
+    "url": "http://localhost:3000/api/posts",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-04-27T14:05:44.688Z",
+    "modified": "2022-04-27T14:10:17.084Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "0368089f-4ea7-48fa-951b-dbcaa20bb817",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/posts",
+    "url": "http://localhost:3000/api/posts",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-04-27T14:05:55.700Z",
+    "modified": "2022-04-27T14:07:01.537Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"title\": \"ASdadasda\",\n    \"content\": \"adSAdadasda\",\n    \"isPublished\": true\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "5c8dd6b6-5ca8-496d-aa28-c690376894c0",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/posts/",
+    "url": "http://localhost:3000/api/posts/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-04-27T14:07:19.849Z",
+    "modified": "2022-04-27T14:07:22.148Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "02fa850c-7cbd-49da-b21f-183f863b20f2",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/users/",
+    "url": "http://localhost:3000/users/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-04-27T15:23:07.137Z",
+    "modified": "2022-04-27T15:23:07.236Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"tester@gmail.com\",\n  \"firstName\": \"Alexandru\",\n  \"lastName\": \"Dragutescu\",\n  \"password\": \"tester123\",\n  \"isSuperUser\": true,\n  \"role\": \"eviloverlord\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "907ed41d-b9e6-4adf-ba89-535d270b2beb",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/users/",
+    "url": "http://localhost:3000/api/users/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-04-27T15:24:00.136Z",
+    "modified": "2022-04-27T15:38:37.012Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"tester19@gmail.com\",\n  \"firstName\": \"Alexandru\",\n  \"lastName\": \"Dragutescu\",\n  \"password\": \"tester12sss23\",\n  \"isSuperUser\": true,\n  \"role\": \"eviloverlord\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "63bb7490-2359-4eb6-b505-2b5e21e61d7c",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/users/",
+    "url": "http://localhost:3000/api/users/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-04-27T15:24:21.871Z",
+    "modified": "2022-04-27T16:40:22.064Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "fa0df49d-97fa-4478-82b1-24fc102a5c64",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/users/register",
+    "url": "http://localhost:3000/api/users/register",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-04-27T15:39:46.944Z",
+    "modified": "2022-04-27T18:25:07.753Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"ndru.dragutsescu@gmail.com\",\n  \"firstName\": \"Alexandsruwu\",\n  \"lastName\": \"Dragutescu\",\n  \"password\": \"1s234\",\n  \"isSuperUser\": true,\n  \"role\": \"eviloverlord\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "d29b9671-598a-49ac-81f8-0c1679dbfce4",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/users/login",
+    "url": "http://localhost:3000/api/users/login",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-04-27T16:20:23.684Z",
+    "modified": "2022-04-27T16:20:23.685Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"email\": \"\",\n    \"password\": \"\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "f1640861-1937-4b65-bf2e-f71bc898bc74",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/api/users/login",
+    "url": "http://localhost:3000/api/users/login",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-04-27T16:23:52.166Z",
+    "modified": "2022-04-27T16:24:23.432Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"email\": \"alexandru.dragutescu@gmail.com\",\n    \"password\": \"1234\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "f437e366-3e8b-4b39-9eac-a3ac36314caf",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:4001/api/users/register",
+    "url": "http://localhost:4001/api/users/register",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-04-27T18:25:38.631Z",
+    "modified": "2022-04-29T15:40:01.870Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"alin.barbu@gmail.com\",\n  \"firstName\": \"Alexssandsruwu\",\n  \"lastName\": \"Dragutescu\",\n  \"password\": \"12345\",\n  \"isSuperUser\": true,\n  \"role\": \"eviloverlord\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "cada21fa-7d38-4622-8825-3281fb2e76bc",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:4001/api/users/login",
+    "url": "http://localhost:4001/api/users/login",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-04-27T18:48:28.885Z",
+    "modified": "2022-05-04T11:30:47.450Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"email\": \"andrei.barbu@gmail.com\",\n    \"password\": \"12345\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "cb4bb499-ac3d-4578-942e-e7fa74766573",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:4001/api/posts/",
+    "url": "http://localhost:4001/api/posts/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-04-27T19:13:35.945Z",
+    "modified": "2022-04-27T19:13:35.945Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "f50f719b-5021-4b9b-8a94-c1a3a34703f6",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:4001/api/posts/",
+    "url": "http://localhost:4001/api/posts/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-04-27T19:15:43.647Z",
+    "modified": "2022-04-27T19:16:47.139Z",
+    "headers": [
+      {
+        "name": "x-access-token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFuZHJlaS5iYXJidUBnbWFpbC5jb20iLCJpYXQiOjE2NTEwODY5MzAsImV4cCI6MTY1MTA5NDEzMH0.4niLhR0A7OOOyt37iji6IkP5A1u6PP-KYvyWk8DbSKc"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"title\": \"Some post\",\n    \"content\": \"This a post kadkajsdnjaskdlas\",\n    \"isPublished\": true\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "2f78b5af-15d9-45e6-bea0-c2f9bfc98933",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:4001/api/users/logout",
+    "url": "http://localhost:4001/api/users/logout",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-04-29T15:16:11.868Z",
+    "modified": "2022-05-04T11:27:51.307Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
