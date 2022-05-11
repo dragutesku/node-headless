@@ -8,12 +8,12 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-04-27T15:31:46.924Z",
-    "modified": "2022-04-29T15:40:01.869Z",
+    "modified": "2022-05-05T10:28:16.468Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"email\": \"alin.barbu@gmail.com\",\n  \"firstName\": \"Alexssandsruwu\",\n  \"lastName\": \"Dragutescu\",\n  \"password\": \"12345\",\n  \"isSuperUser\": true,\n  \"role\": \"eviloverlord\"\n}",
+      "raw": "{\n  \"email\": \"alina.barbu@gmail.com\",\n  \"firstName\": \"Alexssandsruwu\",\n  \"lastName\": \"Dragutescu\",\n  \"password\": \"123456\",\n  \"isSuperUser\": true,\n  \"role\": \"eviloverlord\"\n}",
       "form": []
     },
     "tests": []
@@ -41,7 +41,7 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2022-04-27T16:20:32.260Z",
-    "modified": "2022-05-04T11:30:47.448Z",
+    "modified": "2022-05-05T10:28:40.745Z",
     "headers": [],
     "params": [],
     "body": {
@@ -79,7 +79,7 @@
     "_id": "22974437-1577-4c13-bca4-865f9d78750c",
     "colId": "2baedc6f-dbeb-484c-8d6e-49700e0dc877",
     "containerId": "",
-    "name": "http://localhost:4001/api/users/logout",
+    "name": "Logout",
     "url": "http://localhost:4001/api/users/logout",
     "method": "POST",
     "sortNum": 50000,

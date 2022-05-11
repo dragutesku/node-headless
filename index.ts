@@ -7,7 +7,6 @@ import {
   Database, 
   RedisClient 
 } from "./src/data-source";
-import { v4 as uuidv4 } from 'uuid';
 
 const helmet = require('helmet');
 const session = require('express-session');
@@ -17,6 +16,7 @@ const bodyParser = require('body-parser');
 // DOENV CONFIG
 require('dotenv').config();
 
+import { setUUID } from './src/services/auth.services';
 import { PostController } from './src/controller/post.controller';
 import { UserController } from './src/controller/user.controller';
 
@@ -50,22 +50,20 @@ class Server {
 
     // Generate Session
     this.app.use(session({
-      genid:function () {
-        return uuidv4();
-      },
+      genid: setUUID,
       store: new RedisStore({ 
         client: RedisClient,
         ttl: 60 * 60, //1 hour,
         prefix: `session:` 
       }),
+      secret: 'secret$%^134',
+      resave: true,
+      saveUninitialized: false,
       cookie: {
         expires: new Date(Date.now() + (60 * 60 * 1000)),
         maxAge: 60 * 60 * 1000,
         secure: false
       },
-      secret: 'secret$%^134',
-      resave: false,
-      saveUninitialized: true,
     }));
 
     // Instance of the post controller
