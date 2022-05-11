@@ -164,12 +164,12 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-04-27T18:25:38.631Z",
-    "modified": "2022-04-29T15:40:01.870Z",
+    "modified": "2022-05-05T10:28:16.469Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"email\": \"alin.barbu@gmail.com\",\n  \"firstName\": \"Alexssandsruwu\",\n  \"lastName\": \"Dragutescu\",\n  \"password\": \"12345\",\n  \"isSuperUser\": true,\n  \"role\": \"eviloverlord\"\n}",
+      "raw": "{\n  \"email\": \"alina.barbu@gmail.com\",\n  \"firstName\": \"Alexssandsruwu\",\n  \"lastName\": \"Dragutescu\",\n  \"password\": \"123456\",\n  \"isSuperUser\": true,\n  \"role\": \"eviloverlord\"\n}",
       "form": []
     },
     "tests": []
@@ -183,7 +183,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-04-27T18:48:28.885Z",
-    "modified": "2022-05-04T11:30:47.450Z",
+    "modified": "2022-05-05T10:28:40.746Z",
     "headers": [],
     "params": [],
     "body": {
@@ -240,7 +240,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-04-29T15:16:11.868Z",
-    "modified": "2022-05-04T11:27:51.307Z",
+    "modified": "2022-05-05T09:57:49.903Z",
     "headers": [],
     "params": [],
     "tests": []

@@ -6,9 +6,11 @@ import {
 import { User } from "../entity/User";
 import { UserLogin } from "../entity/User";
 import { UserServices } from "../services/user.services";
+import moment from 'moment';
+import { stopCoverage } from "v8";
 
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+import { validatePassword, securePassword } from '../services/auth.services';
 
 /**
  *
@@ -20,6 +22,7 @@ const bcrypt = require("bcrypt");
 export class UserController {
   public router: Router;
   private userService: UserServices;
+  public prevUser = null;
 
   constructor() {
     this.router = Router();
@@ -45,38 +48,51 @@ export class UserController {
     const session = req['session'];
     const user = req['body'] as UserLogin;
     const foundUser = await this.userService.findUserByEmail(user.email);
+    let currentTime = moment().format();
 
     if(user.password === null) {
       res.status(404).json({ error: "Password cannot be empty" });
       return;
     }
 
-    if (foundUser) {
-      const validatePassword = await bcrypt.compare(user.password, foundUser.password);
+    if (foundUser && validatePassword) {
+        let currentUser = foundUser.email;
 
-      if (validatePassword) {
-        session.success = true;
-        session.key = user.email;
-        let currentdate = new Date().toISOString(); 
+        session.email = foundUser.email;
+        session.userId = foundUser.id;
 
-        // user
-        res.status(200).json({
+        let userRes = {
           sessionId: session.id,
-          userid: foundUser.id,
-          email: user.email,
-          timeOfLogin: currentdate
-        });
-      } else {
-        res.status(401).json({message: "Credentials wrong"});
-      }
+          userid: session.userId,
+          email: session.email,
+          timeOfLogin: currentTime,
+          views: session.views
+        }
+
+        session.save();
+
+        if(this.prevUser == currentUser) {
+          session.regenerate(function(err) {
+            console.log(session.id)
+          }) 
+        }
+
+
+        this.prevUser = currentUser;
+        res.status(200).json({userRes});
     } else {
-      res.status(409).json({message: "User not found"});
+      res.status(401).json({
+        message: `User with email ${foundUser.email} not found or credentials wrong`
+      });
     }
   }
 
   // UPDATE: Logout User
   public logout = async (req: Request, res: Response) => {
     const session = req['session'];
+
+    delete session.email;
+    delete session.userId;
 
     session.destroy(err => {
       if (err) {
@@ -105,8 +121,7 @@ export class UserController {
 
     // Register
     user.email = user.email.toLowerCase();
-    let salt = await bcrypt.genSalt(10);
-    user.password = await bcrypt.hash(user.password, salt);
+    user.password = await securePassword(user.password);
     user.timeOfRegister = currentdate;
     user.role = "USER";
 

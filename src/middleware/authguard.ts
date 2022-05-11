@@ -5,9 +5,9 @@ import {
 } from "express";
 
 const session = require('express-session');
-const cookieParser = require('cookie-parser');
-const MemcachedStore = require('connect-memcached')(session);
 const random = require("random");
+
+import { v4 as uuidv4 } from 'uuid';
 
 export class Session {
   public router: Router;
@@ -32,6 +32,10 @@ export class Session {
   
 }
 
+export const setUUID = (req, res, next) => {
+  return uuidv4();
+}
+
 
 
 const verifySession = (req, res, next) => {
@@ -50,4 +54,7 @@ const verifySession = (req, res, next) => {
   return next();
 };
 
-module.exports = verifySession;
+module.exports = {
+  setUUID,
+  verifySession
+};
