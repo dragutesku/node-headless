@@ -3,6 +3,7 @@ import express, {
   Response 
 } from 'express';
 import cors from 'cors';
+import multer from 'multer';
 import "reflect-metadata";
 import { 
   Database, 
@@ -38,6 +39,8 @@ class Server {
   private app: express.Application;
   private postController: PostController;
   private userController: UserController;
+  private storage;
+  private upload;
 
   constructor() {
     this.app = express(); // init app
@@ -47,6 +50,15 @@ class Server {
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({extended: true}));
     this.app.use(helmet());
+    this.storage = multer.diskStorage({
+      destination: function (req, file, cb) {
+        cb(null, 'uploads');
+      },
+      filename: function (req, file, cb) {
+        cb(null, file.originalname + '-' + Date.now());
+      }
+    });
+    this.upload = multer({ storage: this.storage });
 
     this.databaseInit(); // init dbs
 
@@ -110,7 +122,7 @@ class Server {
    */
   public routes() {
     // Post controller
-    this.app.use(`/v1/api/posts/`, this.postController.router);
+    this.app.use(`/v1/api/posts/`, this.upload.single('image'), this.postController.router);
     this.app.use(`/v1/api/users/`, this.userController.router);
 
     this.app.get("/", (req: Request, res: Response) => {

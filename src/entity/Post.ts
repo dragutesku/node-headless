@@ -10,12 +10,18 @@ export class Post {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ length: 100 })
+  @Column({ type: 'varchar', length: 100, nullable: false })
   title: string;
 
-  @Column("text")
+  @Column({ type: 'text', nullable: true })
+  description: string;
+
+  @Column({ type: 'text', nullable: false })
   content: string;
 
-  @Column()
+  @Column({ nullable: true })
+  image: string;
+
+  @Column({ type: 'int', nullable: true })
   isPublished: boolean;
 }
