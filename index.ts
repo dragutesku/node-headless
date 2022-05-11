@@ -2,6 +2,7 @@ import express, {
   Request, 
   Response 
 } from 'express';
+import cors from 'cors';
 import "reflect-metadata";
 import { 
   Database, 
@@ -42,6 +43,7 @@ class Server {
     this.app = express(); // init app
 
     // MIDDLEWARE INIT
+    this.app.use(cors());
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({extended: true}));
     this.app.use(helmet());
@@ -108,8 +110,8 @@ class Server {
    */
   public routes() {
     // Post controller
-    this.app.use(`/api/posts/`, this.postController.router);
-    this.app.use(`/api/users/`, this.userController.router);
+    this.app.use(`/v1/api/posts/`, this.postController.router);
+    this.app.use(`/v1/api/users/`, this.userController.router);
 
     this.app.get("/", (req: Request, res: Response) => {
       res.send("Hello World");

@@ -27,7 +27,7 @@ export class PostController {
   public index = async (req: Request, res: Response) => {
     const posts = await this.postService.index();
     // Execute method of service
-    res.send(posts).json();
+    res.send(posts);
   }
 
   public create = async (req: Request, res: Response) => {
